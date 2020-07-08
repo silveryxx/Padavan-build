@@ -41,8 +41,9 @@ jobs:
         TNAME: "Youku-L2"
       run: |
         cd /opt/rt-n56u/trunk/user/shared
-        sed 's/ASUS/Windy/g' defaults.h
-        sed 's/1234567890/mkd1230.+/g' defaults.h
+        sed -i 's/ASUS/Windy/g' defaults.h
+        sed -i 's/1234567890/mkd1230.+/g' defaults.h
+        sed -i 's/147852369/Feng*963./g' defaults.h
         cd /opt/rt-n56u/trunk
         if [ ! -f configs/templates/$TNAME.config ] ; then
         echo "configs/templates/$TNAME.config not found "
